@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sports Registration</title>
+</head>
+<style>
+    body{
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKnpCjAqhc5W1r__N6L6nJeeJ0PaoYuT1vKw&usqp=CAU');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+    }
+</style>
+<body>
+    <header>
+        <h1>
+            <a href="file:///C:/Users/saira/sports.html.com">Sports</a>
+        </h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-secondary" href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <form class="registration-form">
+            <h1>Sports Registration</h1>
+            <div class="input-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="input-group">
+                <label for="sport">Sport:</label>
+                <select id="sport" name="sport" required>
+                    <option value="" disabled selected>Select a sport</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="volleyball">volleyball</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        
+    </div>  
+</body>
+</html>

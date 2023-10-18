@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sports registration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          
+            $("#name").hide().slideDown(1000).fadeIn(1000);
+            $("#email").hide().slideDown(1200).fadeIn(1200);
+            $("#Blood Group").hide().slideDown(1500).fadeIn(1500);
+            $("#name").click(function() {
+                $(this).toggleClass("text-danger");
+            });
+
+            $("#email").hover(function() {
+                $(this).css("color", "blue");
+            }, function() {
+                $(this).css("color", "");
+            });
+
+            $("button[type='submit']").hover(function() {
+                $(this).css("font-size", "20px");
+            }, function() {
+                $(this).css("font-size", "");
+            });
+            $("#selectedBlood").hide();
+            $("#Blood group").change(function() {
+                var selectedBlood = $(this).val();
+                $("#selectedBlood").text("Selected Blood: " + selectedBlood).fadeIn();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Blood Donation System</h1>
+    </header>
+
+    <div class="container mt-4">
+        <form action="" class="was-validated">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">
+                 Please enter your name.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+
+            <div class="form-group">
+                 <label for="bloodGroupSearch">Blood Group:</label>
+                <select id="bloodGroupSearch" name="bloodGroupSearch" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                   <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+               
+                <div class="invalid-feedback">
+                    Please select a Blood Group.
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Book Blood Group</button>
+        </form>
+
+        <p id="selectedBloodGroup">Selected Blood Group: None</p>
+    </div>
+</body>
+</html>
